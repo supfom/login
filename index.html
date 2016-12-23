@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="css/style.css" media="all"/>
+<title>会员登录-国际能源网</title>
+</head>
+<body>
+<div class="login_top">
+    <div class="login_logo"><img src="images/logo.jpg"  alt=""/></div>
+        <div class="login_lx"><img src="images/lx.jpg"  alt=""/></div>
+    </div>
+    <div class="login_main">
+    <div class="loginM_con">
+        <div class="loginM_bj"></div>
+            <div class="loginM_box">
+<form method="post" action="login.php" onsubmit="return Dcheck();">
+<input name="forward" type="hidden" id="forward" value="http://www.in-en.com/">
+<input name="option" type="hidden" value="username">
+<input name="submit" type="hidden" value="1">
+            <p style="height:68px;"></p>
+            <p>用户名：</p>
+                <div class="loginM_box_k"><input name="username" type="text" id="username" value=""/></div>
+                <p style="margin-top:10px;">密码：</p>
+                <div class="loginM_box_k mm">
+<input name="password" class="inp" id="password" value="" type="password">
+</div>
+<input value=" " class="loginM_box_btn" type="submit">
+                
+                <p class="w"><a class="zc" href="register.php?forward=http%3A%2F%2Fwww.in-en.com%2F">立即注册</a><a class="wj" href="send.php">忘记密码？</a></p>
+</form>
+            </div>
+        </div>
+    </div>
+<div style="height:40px;"></div>
+<script type="text/javascript">
+if(document.getElementById('username').value == '') {
+document.getElementById('username').focus();
+} else {
+document.getElementById('password').focus();
+}
+function Dcheck() {
+if(document.getElementById('username').value == '') {
+confirm('请输入登录名称');
+document.getElementById('username').focus();
+return false;
+}
+if(document.getElementById('password').value == '') {
+confirm('请输入密码');
+document.getElementById('password').focus();
+return false;
+}
+}
+</script>
+</body>
+</html>

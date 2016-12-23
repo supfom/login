@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <title>登录-中国供应商</title>
+	<meta name="description" content="欢迎登录中国供应商(www.china.cn)在线推广您的产品。中国供应商(www.china.cn)是基于我国经济建设趋势和企业发展需求，由中国互联网新闻中心推出的B2B网络贸易平台。">
+    <meta name="keywords" content="中国供应商,中国供应商网,B2B,B2B平台,中国供应商登录">
+   <link rel="stylesheet" type="text/css" href="css/main01.css"/>
+    <script type="text/javascript" src="http://himg.china.cn/js/common/count/count.js" id="token" data-token="pc-my"></script>
+    <!--[if lt IE 9]>
+        <script src="http://himg.china.cn/js/common/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body class="angellogin">
+<!-- header begin -->
+<div class="header fl-clr">
+    <div class="online">
+        <div class="onlineLink fl-clr"><a title="中国供应商首页" data-scode="71903" href="http://cn.china.cn">中国供应商首页</a> | <a title="客服中心" data-scode="71904" href="http://cn.china.cn/bangzhu.html">客服中心</a> | 服务热线：<span class="fl-bold">400-010-1866</span></div>
+    </div>
+</div>
+<!--content begin-->
+<div class="main fl-clr">
+    <div class="logo-regin">
+        <h1><a href="http://cn.china.cn" data-scode="71901" title="中国供应商"><img src="images/200x44_white.png" height="44" alt="中国供应商"></a><span class="page-title">登录</span></h1>
+    </div>
+    <div class="lg-box">
+		  <div class="error3">
+			    <label id="error3" style="display:block">
+					                 </label>
+            </div>
+          <form name="loginForm" id="loginForm" method="post" action="manage.php">
+            <div class="input-mod">
+				<input name="userName" placeholder="请输入登录名" type="text" id="userName"  />
+                <label id="error" class="error ">请输入登录名</label>
+            </div>
+            <div class="input-mod">
+				<input type="password" id="userPassword"  size="15" placeholder="请输入登录密码"/>
+                <input type="hidden" name="userPassword" id="pwd"  size="15" placeholder="请输入登录密码" style="display: none;" />
+                <label id="error1" class="error ">请输入登录密码</label>
+            </div>
+            <div class="input-mod cap-dw">
+			   <input type="text" id="verifystr" name="captcha" size="15" maxlength="4" value="" placeholder="验证码"/>
+                <label id="error2" class="error ">验证码错误</label>
+                <div class="captcha-lg"> 
+				  <img onClick="refreshCaptcha();" id="showCaptcha"  name="showCaptcha" class="captcha" width="90" height="30" title="看不清楚？换一张" alt="验证码" src="/manage.php?op=captha&t=2&seed=283357040" /> 
+				</div>
+            </div>
+            <div class="pass-zc fl-clr">
+			  <a href="#" data-scode="71907" class="pass-lost" title="忘记密码？" target="_blank">忘记密码？</a> 
+			  <a href="#" data-scode="71908" class="pass-ljzc" title="立即注册" target="_blank">立即注册</a> </div>
+            <div class="sign">
+				 <input type="hidden" name="op" value="B2BLoginnew"/>
+                 <input type="hidden" name="destUrl" value="#/"/>
+                 <input type="hidden" name="verifyCode" id="verifyCode" value="{$verifyCode}" />
+                <button class="sign-btn" id="btn" name="btn" type="button" data-scode="71906" >登录</button>
+            </div>
+        </form>
+        <div class="sign-login fl-clr"><span class="xn"></span><span class="sn-wz">社交账号直接登录</span><span class="xn"></span></div>
+        <div class="lg-wx"><a href="javascript:;" id="lg_weixin">
+            <div class="lg_weixin" id="wx_tu"></div>
+            </a></div>
+        <a href="#" target="_blank" class="turnin" title="进入活动"></a>
+    </div>
+</div>
+
+<!-- footer begin -->
+<div class="foot">
+    <p class="links">
+        <a href="http://cn.china.cn/aboutus/" rel="nofollow" target="_blank">关于我们</a> |
+        <a href="http://cn.china.cn/hyfw.html" rel="nofollow" target="_blank">会员服务</a> |
+        <a href="http://cn.china.cn/ad/fuwu/index.html" rel="nofollow" target="_blank">广告服务</a> |
+        <a href="http://cn.china.cn/aboutus/terms.html" rel="nofollow" target="_blank">服务条款</a> |
+        <a href="http://cn.china.cn/map/" target="_blank">网站导航</a> |
+        <a href="http://cn.china.cn/bangzhu.html" target="_blank">客服中心</a> |
+        <a href="http://cn.china.cn/friend/index.htm" target="_blank">友情链接</a> |
+        <a href="http://cn.china.cn/aboutus/contact.html" rel="nofollow" target="_blank">联系我们</a>
+    </p>
+    <p><span>主办单位:中国互联网新闻中心</span> <span>网络传播视听节目许可证号:0105123</span> <a href="http://www.miibeian.gov.cn/" target="_blank" rel="nofollow">京ICP证 040089号</a></p>
+    <p><span>版权所有 中国互联网新闻中心</span> 中国供应商(www.china.cn)</p>
+</div>
+<!-- footer end -->
+<input id="entryFile" type="hidden" value="manage.php"/>
+<input id="state" type="hidden" value="aHR0cDovL2NuLmNoaW5hLmNuLw=="/>
+<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+<script charset="utf-8" type="text/javascript" src="http://himg.china.cn??/js/jquery-1.7.2.min.js,/js/erm/erm_common.min.js,/js/common/jquery.validation/master/jquery.validation.min.js,/js/common/cn/1.10.3.5/cn.min.js,/js/erm/common/common-1.1.min.js?t=201610081712,/js/erm/login_adwx.min.js?t=201606211525"></script><script>
+</script>
+</body>
+</html>
